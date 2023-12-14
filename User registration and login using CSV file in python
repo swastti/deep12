@@ -1,0 +1,23 @@
+import csv
+def writecsv(username,password):
+ f=open("user.csv",'a')
+ writer=csv.writer(f)
+ writer.writerow([username,password])
+ f.close()
+def readcsv():
+ username=input("enter username")
+ password=input("enter password")
+ with open("user.csv",'r') as f:
+ reader=csv.reader(f)
+ for row in reader:
+ if row==[username,password]:
+ print(row)
+ print("you are logged in")
+ break
+else:
+ print("you have to register first")
+ f.close() 
+writecsv("vijay","ab@11")
+writecsv("priya","cd@22")
+writecsv("ramesh","ef@33")
+readcsv()
