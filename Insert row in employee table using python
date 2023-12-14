@@ -1,0 +1,13 @@
+>>> import MySQLdb
+>>>con=MySQLdb.connect(host='localhost',user='root',password='pradnya',da
+tabase='emp')
+>>> cursor=con.cursor()
+>>> str="insert into employee values(106,'radha',40000.0)"
+9
+>>> con.execute(str)
+>>> cursor.execute(str)
+>>> con.commit()
+>>> print("1 row inserted")
+1 row inserted
+>>> cursor.close()
+>>> con.close()
