@@ -1,0 +1,53 @@
+import pickle
+def write():
+ list =[]
+ while True:
+ roll = input("Enter student Roll No:")
+ sname = input("Enter student Name :")
+ marks=int(input('enter marks'))
+ student = [roll,sname,marks]
+ list.append(student)
+ choice= input("Want to add more record(y/n) :")
+ if(choice=='n'):
+ break
+ file = open("studentmarks.dat","wb")
+ pickle.dump(list,file)
+ print("record is updated")
+ file.close()
+def read():
+ file = open("studentmarks.dat", "rb")
+ list = pickle.load(file)
+ for i in list:
+ print(i)
+ file.close()
+def search():
+ file = open("studentmarks.dat", "rb")
+ list = pickle.load(file)
+ found = 0
+ roll =input('Enter roll no that you want to search in binary file :')
+ for r in list:
+ if r[0]==roll:
+ print("record is found name is ",r[1])
+ found=1
+ break
+ if found==0: 
+ print("record is not found") 
+ file.close() 
+print("menu")
+print("1.create record")
+print("2.display record")
+3
+print("3.search record")
+while True:
+ m=input("do you want to continue y/n")
+ if m=='y':
+ ch=input('choice')
+ if ch=='1':
+ write()
+ if ch=='2':
+ read()
+ if ch=='3':
+ search()
+ else:
+ print("you pressed no")
+ break
