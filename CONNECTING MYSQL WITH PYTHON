@@ -1,0 +1,13 @@
+
+In mysql create database emp, create table employee and add records.
+1) create database emp;
+2) use emp; 
+3) create table employee(eno int, ename char(20),sal float);
+4) show tables;
+5) describe employee;
+6) insert into employee values(101,’priti’,50000.0);
+insert into employee values(102,’vikas’,55000.0);
+insert into employee values(103,’ram’,60000.0);
+insert into employee values(104,’shyam’,65000.0);
+insert into employee values(105,’swati’,45000.0);
+7) select * from employee;
