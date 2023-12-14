@@ -1,0 +1,11 @@
+>>> import MySQLdb
+con=MySQLdb.connect(host='localhost',user='root',password='pradnya',datab
+ase='emp')
+>>> cursor=con.cursor()
+>>> str="update employee set salary=50000.0 where ename='radha'"
+>>> cursor.execute(str)
+>>> print("1 row updated")
+1 row updated
+>>> con.commit()
+>>> cursor.close()
+>>> con.close()
