@@ -1,0 +1,13 @@
+>>> import MySQLdb
+>>>con=MySQLdb.connect(host='localhost',user='root',database='emp',passw
+ord='pradnya')
+>>> cursor=con.cursor()
+>>>str=”select * from employee”
+>>> cursor.execute(str)
+>>> rows=cursor.fetchall()
+>>> print("total no of rows",cursor.rowcount)
+total no of rows 5
+>>> for i in rows:
+print(i)
+cursor.close()
+con.close()
