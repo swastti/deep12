@@ -1,0 +1,11 @@
+>>> import MySQLdb
+con=MySQLdb.connect(host='localhost',user='root',password='pradnya',datab
+ase='emp')
+>>> cursor=con.cursor()
+>>> str="delete from employee where eid=103"
+>>> cursor.execute(str)
+>>> con.commit()
+>>> print("1 row deleted")
+1 row deleted
+>>> cursor.close()
+>>> con.close()
