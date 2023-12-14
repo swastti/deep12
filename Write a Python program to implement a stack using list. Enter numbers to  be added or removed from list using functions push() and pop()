@@ -1,0 +1,30 @@
+stack=[]
+n=3
+def push():
+ if len(stack)==n:
+ print("stack overflow")
+4
+ else:
+ value=int(input("enter element in stack"))
+ stack.append(value)
+ print(stack) 
+def pop():
+ if len(stack)==0:
+ print("stack underflow")
+ else:
+ x=stack.pop()
+ print(x,"is removed from stack")
+ print(stack)
+while True:
+ print('''
+ 1.Push value in stack
+ 2.Pop value from stack
+ 3.Exit''')
+ choice=int(input("enter choice"))
+ if choice==1:
+ push()
+ 
+ elif choice==2:
+ pop()
+ else:
+ Break
